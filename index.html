@@ -1,14 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Player</title>
+    <title>El Cine de Michael</title>
+    <!-- Importar Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <video width="1280" height="720" controls>
-        <source src="https://peliculasps4.s3.us-east-2.amazonaws.com/output.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+    <header class="header">
+        <img src="header.png" alt="El Cine de Michael">
+    </header>
+    <section class="now-playing">
+        <h2>HOY EN CARTELERA</h2>
+    </section>
+    <section class="movie-details">
+        <div class="poster">
+            <img src="poster.jpg" alt="Poster Brigada 49">
+        </div>
+        <div class="description">
+            <h3>BRIGADA 49</h3>
+            <p>
+                "La vida del bombero Jack Morrison (Joaquin Phoenix) pende de un hilo. Al intentar rescatar a un ciudadano atrapado, Jack cae en un almacén en llamas que se desploma poco a poco. Mientras tanto, fuera Mike Kennedy (Travolta), el Jefe de Bomberos, lucha por salvar a su mejor amigo. Mientras espera su rescate, Jack pasa revista a su vida empezando por el día en que conoció al entonces Capitán Kennedy y se unió al Cuerpo de Bomberos de Baltimore."
+            </p>
+        </div>
+    </section>
+    <section class="video-player">
+        <h3>REPRODUCTOR CON PELÍCULA</h3>
+        <video width="1280" height="720" controls>
+            <source src="https://peliculasps4.s3.us-east-2.amazonaws.com/output.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </section>
 </body>
 </html>

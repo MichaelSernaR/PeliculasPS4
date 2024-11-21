@@ -1,0 +1,64 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Oswald', sans-serif; /* Usar Oswald como fuente principal */
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* Header */
+.header img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+/* Sección HOY EN CARTELERA */
+.now-playing h2 {
+    margin: 0;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/* Detalles de la película */
+.movie-details {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Póster */
+.poster img {
+    width: 200px; /* Tamaño adecuado */
+    height: auto;
+    border: 2px solid white;
+}
+
+/* Descripción */
+.description {
+    max-width: 600px;
+    text-align: left;
+}
+
+.description h3 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* Reproductor */
+.video-player {
+    margin-top: 20px;
+}
+
+.video-player video {
+    max-width: 90%;
+    border: 2px solid white;
+}
+
+
+
