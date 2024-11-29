@@ -1,10 +1,11 @@
 /* General */
 body {
     margin: 0;
-    font-family: 'Oswald', sans-serif; /* Usar Oswald como fuente principal */
+    font-family: 'Oswald', sans-serif; /* Fuente principal */
     background-color: black;
     color: white;
     text-align: center;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -34,7 +35,7 @@ body {
 
 /* Póster */
 .poster img {
-    width: 200px; /* Tamaño adecuado */
+    width: 200px;
     height: auto;
     border: 2px solid white;
 }
@@ -50,15 +51,25 @@ body {
     margin-bottom: 10px;
 }
 
-/* Reproductor */
+/* Reproductores */
 .video-player {
     margin-top: 20px;
 }
 
-.video-player video {
-    max-width: 90%;
-    border: 2px solid white;
+.video-player h3 {
+    color: red;
+    margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
+.movie-video {
+    max-width: 90%;
+    border: 2px solid white;
+    display: block;
+    margin: 0 auto;
+}
 
-
+/* Solución para márgenes blancas en pantalla completa */
+.movie-video::-webkit-media-controls {
+    background-color: black;
+}
