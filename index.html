@@ -1,59 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Películas</title>
+    <title>Cine de Michael</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="style.css">
-    <!-- CSS de Slick Carousel -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css">
 </head>
 <body>
     <header>
-        <img class="logo" src="image/logo.jpeg" alt="Logo">
+        <img src="image/logo.jpeg" alt="Logo" class="logo">
     </header>
-    <main>
-        <section class="carousel">
-            <div class="poster">
-                <img src="image/poster_brigada49.jpg" alt="Brigada 49">
-                <button onclick="window.location.href='brigada49.html'">Ver ahora</button>
-            </div>
-            <div class="poster">
-                <img src="image/poster_guardianes.jpg" alt="Guardianes de ALtamar">
-                <button onclick="window.location.href='guardianes.html'">Ver ahora</button>
-            </div>
-            <!-- Agrega más películas aquí -->
-        </section>
-    </main>
-    <!-- JS de Slick Carousel -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+    <section class="carousel">
+        <div class="poster">
+            <img src="image/poster_brigada49.jpg" alt="Brigada 49">
+            <button onclick="window.location.href='brigada49.html'">Ver ahora</button>
+        </div>
+        <!-- Agrega más carteles de películas de manera similar -->
+        <div class="poster">
+            <img src="image/poster_guardianes.jpeg" alt="Guardianes de Altamar">
+            <button onclick="window.location.href='guardianes.html'">Ver ahora</button>
+        </div>
+    </section>
+
+    <!-- Scripts de Slick -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script>
         $(document).ready(function(){
             $('.carousel').slick({
-                dots: true,
-                infinite: true,
-                speed: 500,
-                slidesToShow: 3,
+                slidesToShow: 4, // Mostrar 4 carteles por vez
                 slidesToScroll: 1,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
+                autoplay: true,
+                autoplaySpeed: 2000, // Cambiar imagen cada 2 segundos
+                arrows: true,
+                dots: true
             });
         });
     </script>
-</body>
-</html>
-
-  </main>
-
-  <script src="script.js"></script>
 </body>
 </html>
