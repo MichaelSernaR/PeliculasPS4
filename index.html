@@ -9,36 +9,45 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="header">
-        <img src="header.png" alt="El Cine de Michael">
-    </header>
-    <section class="now-playing">
-        <h2>HOY EN CARTELERA</h2>
-    </section>
-    <section class="movie-details">
-        <div class="poster">
-            <img src="poster.jpg" alt="Poster Brigada 49">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cine de Michael</title>
+  <link rel="icon" href="image/logo.jpeg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="image/header.png" alt="El Cine de Michael" class="logo">
+  </header>
+
+  <main>
+    <!-- Contenedor del carrusel -->
+    <div class="carousel">
+      <!-- Pelicula 1 -->
+      <div class="movie">
+        <img src="image/poster_brigada49.jpg" alt="Brigada 49">
+        <div class="movie-info">
+          <h3>Brigada 49</h3>
+          <a href="brigada49.html" class="btn">Ver ahora</a>
         </div>
-        <div class="description">
-            <h3>BRIGADA 49</h3>
-            <p>
-                "La vida del bombero Jack Morrison (Joaquin Phoenix) pende de un hilo. Al intentar rescatar a un ciudadano atrapado, Jack cae en un almacén en llamas que se desploma poco a poco. Mientras tanto, fuera Mike Kennedy (Travolta), el Jefe de Bomberos, lucha por salvar a su mejor amigo. Mientras espera su rescate, Jack pasa revista a su vida empezando por el día en que conoció al entonces Capitán Kennedy y se unió al Cuerpo de Bomberos de Baltimore."
-            </p>
+      </div>
+
+      <!-- Pelicula 2 -->
+      <div class="movie">
+        <img src="image/poster_guardianes.jpeg" alt="Guardianes de Altamar">
+        <div class="movie-info">
+          <h3>Guardianes de Altamar</h3>
+          <a href="guardianes.html" class="btn">Ver ahora</a>
         </div>
-    </section>
-    <section class="video-player">
-        <h3>PELÍCULA SUBTITULADA</h3>
-        <video class="movie-video" controls>
-            <source src="https://peliculasps4.s3.us-east-2.amazonaws.com/output.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
-    </section>
-    <section class="video-player">
-        <h3>PELÍCULA ESPAÑOL LATINO</h3>
-        <video class="movie-video" controls>
-            <source src="https://peliculasps4.s3.us-east-2.amazonaws.com/spanish.mp4" type="video/mp4">
-            Tu navegador no soporta la etiqueta de video.
-        </video>
-    </section>
+      </div>
+      
+      <!-- Agrega más películas aquí -->
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

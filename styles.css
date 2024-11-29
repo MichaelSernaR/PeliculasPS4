@@ -1,75 +1,99 @@
-/* General */
+/* Estilos generales */
 body {
     margin: 0;
-    font-family: 'Oswald', sans-serif; /* Fuente principal */
-    background-color: black;
-    color: white;
+    font-family: 'Instrument Sans', Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+}
+
+header {
+    background-color: #000;
+    padding: 10px 20px;
     text-align: center;
-    overflow-x: hidden;
 }
 
-/* Header */
-.header img {
-    width: 100%;
-    max-height: 150px;
-    object-fit: contain;
+header .logo {
+    max-width: 300px;
+    height: auto;
 }
 
-/* Sección HOY EN CARTELERA */
-.now-playing h2 {
-    margin: 0;
-    padding: 10px;
-    background-color: red;
-    color: white;
-    font-size: 1.5rem;
-}
-
-/* Detalles de la película */
+/* Estilos para la sección de detalles de la película */
 .movie-details {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
+    flex-wrap: wrap;
     padding: 20px;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-/* Póster */
-.poster img {
-    width: 200px;
+.movie-poster {
+    max-width: 300px;
     height: auto;
-    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Descripción */
-.description {
+.movie-info {
     max-width: 600px;
     text-align: left;
 }
 
-.description h3 {
-    color: red;
+.movie-info h1 {
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-/* Reproductores */
-.video-player {
-    margin-top: 20px;
+.movie-info p {
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
-.video-player h3 {
-    color: red;
+/* Estilos para la sección de videos */
+.video-section {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.video-container h2 {
     margin-bottom: 10px;
-    text-transform: uppercase;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
-.movie-video {
-    max-width: 90%;
-    border: 2px solid white;
-    display: block;
-    margin: 0 auto;
+/* Estilos para los reproductores */
+video {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.movie-video:fullscreen {
+/* Estilos para fullscreen */
+video:fullscreen {
+    margin: 0;
+    padding: 0;
     border: none;
 }
 
+video:-webkit-full-screen {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Respuesta para pantallas pequeñas */
+@media (max-width: 768px) {
+    .movie-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-info {
+        text-align: center;
+    }
+}
