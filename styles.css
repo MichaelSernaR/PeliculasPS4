@@ -19,11 +19,10 @@ header .logo {
 
 /* Carrusel */
 .carousel {
-    display: flex;
-    gap: 20px;
+    width: 100%;
     margin: 20px auto;
     max-width: 80%;
-    justify-content: center;
+    display: block;
 }
 
 .poster {
@@ -33,7 +32,8 @@ header .logo {
 
 .poster img {
     width: 100%;
-    max-width: 250px;
+    height: auto;
+    max-width: 100%; /* Asegura que la imagen se ajuste al tamaño */
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
@@ -57,7 +57,7 @@ header .logo {
     background-color: #b20710;
 }
 
-/* Slick Carousel Overwrites */
+/* Estilos de Slick Carousel */
 .slick-slide {
     display: flex !important;
     justify-content: center;
