@@ -77,10 +77,9 @@ header {
 .slick-prev:before, .slick-next:before {
     content: ""; /* Elimina el texto "previous" y "next" */
     color: red; /* Flechas rojas */
-    font-size: 30px;
+    font-size: 40px;
     background: transparent;
     border: none;
-    z-index: 2;
 }
 
 /* Estilo de las flechas */
