@@ -9,9 +9,9 @@
 /* Header */
 header {
     background-color: #000;
-    height: 190px; /* Altura del header */
+    height: 190px; 
     width: 100%;
-    background-image: url('image/header.png'); /* Asegúrate de que la ruta de la imagen es correcta */
+    background-image: url('image/header.png'); 
     background-size: cover; 
     background-position: center center; 
     background-repeat: no-repeat;
@@ -27,8 +27,8 @@ header {
     align-items: center;
     overflow: hidden;
     margin: 40px auto;
-    width: 700px; /* Ajuste del ancho del carrusel */
-    height: auto; /* El alto será proporcional */
+    width: 700px; 
+    height: auto; 
     position: relative;
 }
 
@@ -60,21 +60,22 @@ header {
     transform: translateX(-50%);
     color: white;
     font-size: 2rem;
-    text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    text-transform: uppercase; /* Texto en mayúsculas */
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.8); /* Sombra difusa en el texto */
     z-index: 1;
 }
 
 /* Flechas del carrusel */
 .slick-prev, .slick-next {
     font-size: 30px;
-    color: #fff;
+    color: red; /* Flechas en rojo */
     background-color: transparent;
     z-index: 2;
 }
 
 .slick-prev:before, .slick-next:before {
     content: ""; 
-    color: #fff;
+    color: red;
 }
 
 .slick-prev {
@@ -107,7 +108,7 @@ header {
 
 /* Estilos comunes para todas las páginas */
 body {
-    background-color: #000; /* Fondo negro */
+    background-color: #000;
     color: #fff;
     line-height: 1.6;
 }
