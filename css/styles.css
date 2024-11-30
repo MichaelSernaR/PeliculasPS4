@@ -32,6 +32,7 @@ header {
     height: 400px; /* Altura adecuada del carrusel */
 }
 
+/* Cada poster */
 .poster {
     position: relative;
     text-align: center;
@@ -60,9 +61,9 @@ header {
     left: 50%;
     transform: translateX(-50%);
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para mayor visibilidad */
     z-index: 1;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -103,7 +104,7 @@ header {
 }
 
 .slick-dots li.slick-active button:before {
-    color: #e50914;
+    color: #e50914; /* Color de los puntos activos */
 }
 
 /* Estilos para pantallas pequeñas */
