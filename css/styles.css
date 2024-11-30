@@ -1,19 +1,20 @@
 /* Estilos generales */
-body {
+* {
     margin: 0;
-    font-family: 'Instrument Sans', Arial, sans-serif;
-    background-color: #141414;
-    color: #fff;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 /* Header */
 header {
     background-color: #000;
-    height: 190px; /* Ajuste de altura para el header */
+    height: 190px; /* Altura del header */
     width: 100%;
-    background-image: url('image/logo.jpeg'); /* Ruta correcta de la imagen */
-    background-size: cover; /* Cubre todo el espacio del header */
-    background-position: center; /* Centra la imagen */
+    background-image: url('image/logo.jpeg'); /* Asegúrate de que la ruta de la imagen es correcta */
+    background-size: cover; /* Asegura que la imagen cubra todo el área */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,30 +27,35 @@ header {
     align-items: center;
     overflow: hidden;
     margin: 40px auto;
-    width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
-    max-width: 100%; /* Para evitar que se haga scroll */
-    height: 400px; /* Altura del carrusel para evitar el scroll vertical */
+    width: 100%;
+    max-width: 100%; /* Asegura que el carrusel ocupe todo el ancho disponible */
+    height: 400px; /* Altura adecuada del carrusel */
 }
 
 .poster {
     position: relative;
     text-align: center;
     flex-shrink: 0;
-    width: 100%; /* Carrusel ocupa todo el ancho */
-    height: 100%; /* Ajusta al tamaño del contenedor */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .poster img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que la imagen llene el espacio sin distorsión */
+    object-fit: cover; /* Ajusta la imagen al tamaño del contenedor sin perder proporción */
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Botón de ver ahora */
 .poster button {
     position: absolute;
-    bottom: 20px;
+    bottom: 20px; /* Ajusta la posición vertical del botón */
     left: 50%;
     transform: translateX(-50%);
     padding: 15px 30px;
@@ -67,12 +73,12 @@ header {
     background-color: #b20710;
 }
 
-/* Flechas del carrusel (sin texto) */
+/* Flechas del carrusel */
 .slick-prev, .slick-next {
     font-size: 30px;
     color: #fff;
-    z-index: 2;
     background-color: transparent;
+    z-index: 2;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -88,7 +94,7 @@ header {
     right: 10px;
 }
 
-/* Estilo de los puntos (dots) del carrusel */
+/* Estilo de los puntos (dots) */
 .slick-dots li button:before {
     color: #fff;
 }
@@ -97,59 +103,104 @@ header {
     color: #e50914;
 }
 
-/* Estilos para la sección de videos */
-.video-section {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    justify-items: center;
-}
-
-.video-container h2 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-/* Estilos para los reproductores */
-video {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Estilos para fullscreen */
-video:fullscreen {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-video:-webkit-full-screen {
-    margin: 0;
-    padding: 0;
-    border: none;
-}
-
-/* Respuesta para pantallas pequeñas */
+/* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
-    .movie-details {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .movie-info {
-        text-align: center;
-    }
-
     .carousel {
         max-width: 100%;
     }
-
+    
     .poster img {
         max-width: 100%;
     }
+}
+
+/* Estilos comunes para todas las páginas */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Enlaces */
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #e50914;
+}
+
+/* Estilos para botones */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #e50914;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b20710;
+}
+
+/* Estilos de pie de página */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+/* Estilos para formularios */
+input, textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #e50914;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: #b20710;
+}
+
+/* Otros ajustes */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    background-color: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    list-style-type: none;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #e50914;
 }
