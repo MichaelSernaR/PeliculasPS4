@@ -62,6 +62,8 @@ header {
     font-size: 2rem;
     text-transform: uppercase; /* Texto en mayúsculas */
     text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.8); /* Sombra difusa en el texto */
+    border: 2px solid red; /* Borde rojo */
+    padding: 5px 10px;
     z-index: 1;
 }
 
