@@ -71,11 +71,12 @@ header {
     color: red; /* Flechas en rojo */
     background-color: transparent;
     z-index: 2;
+    border: none;
 }
 
 .slick-prev:before, .slick-next:before {
-    content: ""; 
-    color: red;
+    content: " "; /* Elimina el texto "previous" y "next" */
+    color: red; /* Flechas rojas */
 }
 
 .slick-prev {
